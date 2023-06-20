@@ -1,6 +1,6 @@
-import {mkdirSync, writeFileSync} from 'fs';
+import { mkdirSync, writeFileSync } from 'fs';
 
-import {ParsedTranslations} from '../types/parser';
+import { ParsedTranslations } from '../types/parser';
 
 export const writeTranslations = (
   path: string,
@@ -13,7 +13,7 @@ export const writeTranslations = (
     Object.keys(translations).forEach((language) => {
       writeFileSync(
         `${__dirname}/${language}.json`,
-        JSON.stringify(translations[language], null, 2),
+        JSON.stringify(translations[language], null, 2)
       );
     });
     return true;

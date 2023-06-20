@@ -3,7 +3,7 @@ import {
   GoogleSpreadsheetWorksheet,
 } from 'google-spreadsheet';
 
-import {LoadSheetOptions} from '../types/load';
+import { LoadSheetOptions } from '../types/load';
 
 export const loadSheets = async (
   doc: Readonly<GoogleSpreadsheet>,

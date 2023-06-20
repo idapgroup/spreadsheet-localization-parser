@@ -9,5 +9,4 @@ register.js
 .prettierignore
 .nycrc.json
 .mocharc.json
-.eslintrc.json
 .editorconfig

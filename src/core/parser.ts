@@ -1,6 +1,6 @@
-import {GoogleSpreadsheetWorksheet} from 'google-spreadsheet';
+import { GoogleSpreadsheetWorksheet } from 'google-spreadsheet';
 
-import {ParsedTranslations, ParserOptions} from '../types/parser';
+import { ParsedTranslations, ParserOptions } from '../types/parser';
 
 const parseSpreadsheet = async (
   sheet: Readonly<GoogleSpreadsheetWorksheet>,

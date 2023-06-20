@@ -27,7 +27,7 @@ const parseSpreadsheet = async (
       return { ...acc, [key]: normalized };
     }, {});
 
-    return { ...accumulator, [lang.toLowerCase()]: data };
+    return { ...accumulator, [lang]: data };
   }, {});
 };
 

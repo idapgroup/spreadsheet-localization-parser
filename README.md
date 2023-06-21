@@ -26,8 +26,12 @@ yarn add @idapgroup/spreadsheet-localization-parser
 
 ```typescript
 import {GoogleSpreadsheet} from "google-spreadsheet";
-import {loadSheets, parseSpreadsheets, writeTranslations, normalizeDynamicValue}  from 'spreadsheet-localization-parser'
-
+import {
+  loadSheets,
+  normalizeDynamicValue,
+  parseSpreadsheets,
+  writeTranslations
+} from "@idapgroup/spreadsheet-localization-parser";
 /**
  * Initialize the sheet - doc ID is the long id in the sheets URL
  */
@@ -86,7 +90,7 @@ Transform string value with regexp pattern to dynamic value
 You can write your own normalize function for your i18n lib
 
 ```typescript
-import {normalizeDynamicValue}  from 'spreadsheet-localization-parser'
+import {normalizeDynamicValue} from "@idapgroup/spreadsheet-localization-parser";
 
 normalizeDynamicValue('First %d days free') // output - First {{value}} days free
 

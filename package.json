@@ -1,6 +1,6 @@
 {
   "name": "@idapgroup/spreadsheet-localization-parser",
-  "version": "1.0.1",
+  "version": "1.0.1-a",
   "description": "",
   "main": "build/index.js",
   "types": "build/index.d.ts",

@@ -8,7 +8,7 @@ const defaultOptions: NormalizeDynamicValueOptions = {
 // function for transform regex to interpolation for i18n
 export const normalizeDynamicValue = (
   value: string,
-  options?: Readonly<NormalizeDynamicValueOptions>
+  options?: Readonly<NormalizeDynamicValueOptions>,
 ) => {
   const { prefix, suffix, dynamicValueName } = {
     ...defaultOptions,

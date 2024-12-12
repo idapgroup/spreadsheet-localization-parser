@@ -1,4 +1,5 @@
-import { GoogleSpreadsheetWorksheet } from '../types/google-spreadsheet';
+import { GoogleSpreadsheetWorksheet } from 'google-spreadsheet';
+
 import { ParsedTranslations, ParserOptions } from '../types/parser';
 
 const parseSpreadsheet = async (
@@ -8,14 +9,14 @@ const parseSpreadsheet = async (
     languages,
     normalizeValue,
     keepEmpty,
-  }: Readonly<ParserOptions>
+  }: Readonly<ParserOptions>,
 ): Promise<ParsedTranslations> => {
   const rows = await sheet.getRows();
 
   return languages.reduce((accumulator: ParsedTranslations, lang) => {
     const data = rows.reduce((acc: Record<string, string>, curr) => {
-      const key = curr?.[keyColumnName];
-      const value = curr?.[lang];
+      const key = curr?.get(keyColumnName);
+      const value = curr?.get(lang);
       if (!key) {
         return acc;
       }
@@ -32,10 +33,10 @@ const parseSpreadsheet = async (
 
 export const parseSpreadsheets = async (
   sheets: Readonly<GoogleSpreadsheetWorksheet[]>,
-  options: Readonly<ParserOptions>
+  options: Readonly<ParserOptions>,
 ): Promise<ParsedTranslations> => {
   const parsedSheets = await Promise.all(
-    sheets.map((sheet) => parseSpreadsheet(sheet, options))
+    sheets.map((sheet) => parseSpreadsheet(sheet, options)),
   );
 
   return parsedSheets.reduce((acc, curr) => {

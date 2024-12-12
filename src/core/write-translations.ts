@@ -4,7 +4,7 @@ import { ParsedTranslations } from '../types/parser';
 
 export const writeTranslations = (
   path: string,
-  translations: ParsedTranslations
+  translations: ParsedTranslations,
 ): boolean => {
   try {
     const __dirname = `${process.cwd()}/${path}`;
@@ -13,7 +13,7 @@ export const writeTranslations = (
     Object.keys(translations).forEach((language) => {
       writeFileSync(
         `${__dirname}/${language}.json`,
-        JSON.stringify(translations[language], null, 2)
+        JSON.stringify(translations[language], null, 2),
       );
     });
     return true;

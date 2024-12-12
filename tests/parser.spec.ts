@@ -2,15 +2,13 @@ import {expect} from "chai";
 import {GoogleSpreadsheetWorksheet} from "google-spreadsheet";
 import {describe, it} from "mocha";
 import {loadSheets, parseSpreadsheets} from "../src";
-import {testCredentials} from "./static/test-credentials.spec";
-import {TEST_SHEET_NAMES, TEST_SPREADSHEET} from "./static/test-doc.spec";
+import {TEST_SHEET_NAMES, TEST_SPREADSHEET} from "./static/test-spreadsheet";
 
 let sheets: GoogleSpreadsheetWorksheet[] = [];
 const languages = ['EN', 'DE'];
 const keyColumnName = 'Android';
 describe('Parser operations', () => {
   before(async () => {
-    await TEST_SPREADSHEET.useServiceAccountAuth(testCredentials)
     sheets = await loadSheets(TEST_SPREADSHEET, { sheetNames: TEST_SHEET_NAMES });
   });
 

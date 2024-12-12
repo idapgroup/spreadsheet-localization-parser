@@ -1,7 +1,8 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./",
+    "rootDir": "../",
+    "outDir": "../dist",
     "module": "commonjs",
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
@@ -17,6 +18,8 @@
     "../node_modules"
   ],
   "include": [
+    "../src/**/*.ts",
+    "../test/static/**/*.ts",
     "./**/*.ts"
   ]
 }

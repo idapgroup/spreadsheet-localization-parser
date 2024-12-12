@@ -12,3 +12,4 @@ register.js
 .mocharc.json
 .eslintrc.json
 .editorconfig
+spreadsheet-creds.json

@@ -1,6 +1,5 @@
 import {describe, it} from 'mocha';
-import {TEST_SHEET_NAMES, TEST_SPREADSHEET} from './static/test-doc.spec';
-import {testCredentials} from './static/test-credentials.spec';
+import {TEST_SHEET_NAMES, TEST_SPREADSHEET} from './static/test-spreadsheet';
 import {
   loadSheets,
   ParsedTranslations,
@@ -14,7 +13,6 @@ const languages = ['EN', 'DE'];
 const keyColumnName = 'Android';
 describe('Write file operations', () => {
   before(async () => {
-    await TEST_SPREADSHEET.useServiceAccountAuth(testCredentials);
     const sheets = await loadSheets(TEST_SPREADSHEET, {
       sheetNames: TEST_SHEET_NAMES,
     });
@@ -25,7 +23,7 @@ describe('Write file operations', () => {
   });
 
   it('can save files', () => {
-    const path = 'test/i18n';
+    const path = 'tests/i18n';
     const res = writeTranslations(path, translations);
     expect(res).to.be.true;
   });

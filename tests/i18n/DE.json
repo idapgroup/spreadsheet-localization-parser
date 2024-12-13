@@ -40,5 +40,8 @@
   "view_history": "Verlauf anzeigen",
   "subs_try_title": "Dann %s pro Jahr (wenn nicht gekündigt)",
   "subs_free_months": "12 Monate zu %s /mo SAVE 55\\%%",
+  "home": {
+    "title": "hier"
+  },
   "intro_message": "Du bist nicht alleine"
 }

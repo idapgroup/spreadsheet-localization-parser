@@ -1,6 +1,6 @@
 {
   "name": "@idapgroup/spreadsheet-localization-parser",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -35,11 +35,13 @@
   },
   "dependencies": {
     "google-auth-library": "^9.15.0",
-    "google-spreadsheet": "^4.1.4"
+    "google-spreadsheet": "^4.1.4",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/chai": "^4.3.5",
+    "@types/lodash": "^4.17.13",
     "@types/mocha": "^10.0.1",
     "@types/node": "^20.3.1",
     "@typescript-eslint/eslint-plugin": "^5.59.11",

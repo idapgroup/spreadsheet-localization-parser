@@ -40,5 +40,8 @@
   "view_history": "View History",
   "subs_try_title": "Then %s a year (if not cancelled)",
   "subs_free_months": "12 months at %s /mo SAVE 55\\%%",
+  "home": {
+    "title": "test"
+  },
   "intro_message": "You’re not alone"
 }

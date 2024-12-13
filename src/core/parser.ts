@@ -1,4 +1,5 @@
 import { GoogleSpreadsheetWorksheet } from 'google-spreadsheet';
+import { set } from 'lodash';
 
 import { ParsedTranslations, ParserOptions } from '../types/parser';
 
@@ -24,7 +25,7 @@ const parseSpreadsheet = async (
         return acc;
       }
       const normalized = normalizeValue ? normalizeValue(value) : value;
-      return { ...acc, [key]: normalized };
+      return set(acc, key, normalized);
     }, {});
 
     return { ...accumulator, [lang]: data };
